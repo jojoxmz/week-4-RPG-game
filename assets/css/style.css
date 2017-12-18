@@ -1,0 +1,26 @@
+html {
+    height: 100%;
+}
+
+body {
+    /* background-color: lightslategray; */
+    background: url("../images/background.jpg") no-repeat center center fixed;
+}
+
+header {
+    text-shadow: 15px 6px 6px rgb(241, 205, 205);
+    font-size: 70px;
+    background: black;
+    color: rgb(211, 35, 35);
+    text-align: center;
+}
+
+h2 {
+    color: red;
+}
+
+img {
+    position: static;
+    background: white;
+    width: 10%;
+}

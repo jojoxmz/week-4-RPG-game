@@ -1,0 +1,79 @@
+var word = "food"
+
+//change is string to an array
+var wordArray = Array.from(word)
+
+//change array to string
+wordArray.toString();
+
+Try on console
+
+-----includes is a method
+var arr = [1, 2, 3]
+
+arr.includes(2) // True
+arr.includes(4) // False
+
+------
+
+var numbers = [1,2,3]
+
+numbers.fill(2)
+console.log(numbers) // [2, 2, 2,]
+
+
+--------
+
+var words = ["hi", "poop", "bye"]
+
+words.splice(2, 0 , "owl")
+
+a) this wills a return ["hi", "poop", "owl", "bye"]
+--must console.log to return and so the index of 2, remove the 0 
+
+////
+the promise object represents the eventual conpletion (or failure) of an asynchronous operation, and its results value
+    a)Like  when the computer gets a message stating that an upgrade is awaiting. So the promise is that you can continue working and later shows upgrade
+
+
+var arr = [1,2,3]
+
+word splice[2,0, "_"] would remove the 3 
+
+or
+
+arr.pop() - pop the end numbers ====== push ========//[2]
+arr.shift() -pop the front numbers         =========//[2]
+
+====================
+
+var arr = [1,2,3]
+
+arr.push(4)  //[1,2,3,4] - its adding on to it again
+
+arr.push(5,6,7,8) - this will [1,2,3,4,5,6,7,8]
+
+
+
+==================
+
+var arr = [1,2,3]
+
+arr.reverse() //[3,2,1]
+
+
+===============
+var word = "hello, how are you"
+word.split()
+word.split(" ")
+----["hello", "how", "are", "you"]
+word.split(" ")
+["h", "e", "l", "l", "o"]
+
+
+var arr1 = [1,2,3]
+var arr2 = [4,5,6]
+
+var combined = arr1.concat(arr2)
+
+//console.log[1,2,3,4,5,6]

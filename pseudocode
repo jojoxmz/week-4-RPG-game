@@ -1,0 +1,108 @@
+//Tekken RPG Game
+
+// Theme Song - very proud
+ $(document).ready(function () {
+    // Gets Link for Theme Song
+    var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", "Assets/moonlight.mp3");
+
+    // Theme Button
+    $(".theme-button").on("click", function () {
+    audioElement.play();
+    });
+});
+
+//===========================================================
+//This function level scop will automically run when the page has loaded
+// $(function () { 
+// //1. Basic Variables
+// //===========================================================
+// //Create variables for each player including name, attack power, healthPoints, 
+
+var characters = {
+    'Bryan Fury': {
+        name: 'bryan Fury',
+        baseAttackPower: 8,
+        healthPoints: 100,
+        imageUrl: ('assets/images/bryanfury.jpg'),
+        enemyAttackPower: 10,
+        },
+    'King': {
+        name: 'King',
+        baseAttackPower: 4,
+        healthPoints: 150,
+        imageUrl: ('assets/images/king.jpg'),
+        enemyAttackPower: 11,
+        },
+    'Kazuya Mishima': {
+        name: 'Kazuya Mishima',
+        baseAttackPower: 8,
+        healthPoints: 160,
+        imageUrl: ('assets/images/kazuyamishima.jpg'),
+        enemyAttackPower: 10,
+        },
+    'Yoshimitsu': {
+        name: 'Yoshimitsu',
+        baseAttackPower: 8,
+        healthPoints: 100,
+        imageUrl: ('assets/images/yoshimitsu.jpg'),
+        enemyAttackPower: 10,
+        },
+    }
+
+    
+// //2. Arrays
+// //===========================================================
+// //Create an array to hold information
+// //Create HP and attack power randomly using for loop to generate when user attacks with selected opponent and selected character
+
+$(document).ready(function(){
+    var objFighter = new Object()
+
+}) 
+
+
+
+// //3. Functions
+//============================================================
+
+// A)When game starts, user chooses a character by clicking fighter's picture; user can not reclick to another opponent
+// B)The selected character is then placed into DEFEND AREA with Random opponent (use a for loop to randomize computer character)
+// C)Within this function the ATTACK button should be affective
+// D)When user clicks the ATTACK button, damages the defender and opponent losses HEALTH POINTS
+    //The opponent will lose HEALTH POINTS
+    //These points are displayed at the bottom of the screen
+// E)Immediately after, opponent will COUNTER with their attack and user's character will dealt damage
+    //The player character will lose some HP
+    //These points are displayed at the bottom of the screen
+// F)IF/Else statement:
+//   If opponents HP is at 0, remove enemy from DEFEND ZONE; and USER picks a new opponent
+//   If user's HP is at 0, game ends
+// Within all these, need to INPUT HEALTHPOINTS into the html showing the attack damage
+// G)Player wins the game by defeating all the enemy characters
+// H)Each time the player attacks,
+//  Their character attack power increases it's base attack power
+// I)Check and se if there are any enemy in the defender zone
+//  IF not, output a message to DOM
+//  When enemy is defeated, output a message to DOM
+// J)Enemy character only has COUNTER ATTACK POWER
+//  REMEMBER: PLAYER CHOOSEN CHARACTER HAS ATTACK POINTS, COUNTER POWERS IT NEVER CHANGES
+// K)The health points, attack power and counter power of each character must differ 
+
+
+
+////////
+//No characters in html, taking character creating one block of in js
+//Render is each character on a page; each character has a class (need click event
+//jQuery click event needs to add to character when click; which ever character is grabbed on grab the data from it. 
+//append method - take content of text or whatever going to add to the end of the target
+//append to the defender zone div 
+//attack button with IF (runs if both selected character and opponent are in the defender zone)
+//while loops ealth renders to opponnent health reaces zero 
+
+// while (defender.health > 0) {
+//     attacker.attacker(defender);
+// }
+
+// keeps running until it reaches 0 in this case and don't need to add if/else statements
+//Need to check if enenmy

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tekken RPG Game</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+</head>
+
+<body>
+  <div class="main-container">
+
+    <div class="header">
+      <header>Tekken RPG Game</header>
+    </div>
+
+    <div class="character">
+      <h2>Select Your Character</h2>
+
+      <span class="character" id="bryanfury-character">
+        <p>Bryan Fury</p>
+        <img src="./assets/images/bryanfury.jpg" alt="bryanfury" width="200px">
+        <p class="health">150</p>
+      </span>
+
+      <span class="character" id="king-character">
+        <p>King I</p>
+        <img src="./assets/images/king.jpg" alt="king" width="200px">
+        <p class="health">130</p>
+      </span>
+
+      <span class="character" id="kazuya-character">
+        <p>Kazuya Mishima</p>
+        <img src="./assets/images/kazuyamishima.jpg" alt="kazuyamishima" width="200px">
+        <p class="health">100</p>
+      </span>
+
+      <span class="character" id="yoshimitsu-character">
+        <p>Yoshimitsu</p>
+        <img src="./assets/images/yoshimitsu.jpg" alt="yoshimitsu" width="200px">
+        <p class="health">150</p>
+      </span>
+    </div>
+
+    <div id="chosen-characters-container">
+      <h2>Your Characters</h2>
+    </div>
+
+    <div id="enemies-container">
+      <h2>Enemies Available To Attack</h2>
+    </div>
+
+    <div id="fight-container">
+      <h2>Fight Section</h2>
+      <div class="button-container">
+        <button type="button" id="attack-button">Attack!</button>
+      </div>
+    </div>
+
+    <div id="defender-container">
+      <h2>Defender</h2>
+    </div>
+
+    <div id="message-container">
+    </div>
+
+  </div>
+  <script type="text/javascript" src="./assets/javascript/game.js"></script>
+</body>
+</html>
