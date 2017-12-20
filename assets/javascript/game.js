@@ -1,4 +1,6 @@
 //Tekken RPG Game
+
+
 //===========================================================
 //1. Global Variables for each character with attack power, health, and counter
 //No character is selected nor defender 
@@ -18,25 +20,25 @@ var Characters = {
         name: 'Bryanfury',
         baseAttackPower: 3,
         health: 120,
-        attack: 10,
+        attack: 4,
         },
     King: {
         name: 'King',
         baseAttackPower: 2,
         health: 100,
-        attack: 11,
+        attack: 3,
         },
     Kazuyamishima: {
         name: 'Kazuyamishima',
         baseAttackPower: 8,
         health: 90,
-      	attack: 8,
+      	attack: 4,
         },
    Yoshimitsu: {
         name: 'Yoshimitsu',
         baseAttackPower: 1,
         health: 180,
-        attack: 10,
+        attack: 9,
         }
     };
 
@@ -54,7 +56,7 @@ function settingUpCharacter(chosenCharacter){
 }
 //Creating a function to render the selected defender before player chooses the player
 function settingUpDefenders(chosenDefenders){
-	console.log('looking at our chooice', chosenDefenders)
+	console.log('looking at our choice', chosenDefenders)
 	defenders.name = chosenDefenders.name;
 	defenders.health = chosenDefenders.health;
 	defenders.baseAttackPower = chosenDefenders.baseAttackPower;
@@ -64,23 +66,15 @@ function settingUpDefenders(chosenDefenders){
 
 //moving other characters into enemy container grabbing their ID's/Class in html
 function movingEnemiesToTheirContainer(){
-	$('.character').removeClass('character').addClass("enemy-characters");
+	$('.character').removeClass('characterzzzz').addClass("enemy-characters");
 	$('#enemies-container').append($(".enemy-characters"));
-	$('.enemy-characters').css("background-color", 'red');
+	$('.enemy-characters').css("background-color");
 }
 
 //Now the game starts with this function
-$(document).ready(function() {
+	$(document).ready(function() {
 	// $("#restart").hide();
-	
-	var audioElement = document.createElement("audio");
-	audioElement.setAttribute("src", "Assets/moonlight.mp3");
 
-	// Theme Button
-	$(".theme-button").on("click", function () {
-		audioElement.play();
-	});
-	    
 //================ BRYAN FURY SECTION ======================\\
 //Bryan Fury when clicked creates a function; console.log works :D
 	$('#bryanfury-character').on('click', function(){
@@ -167,7 +161,7 @@ $(document).ready(function() {
 				settingUpDefenders(Characters.Kazuyamishima);
 				defenderSelected = true;
 
-				$('#kazuya-character').removeClass('enemy-characters').addClass('defender-character');
+				$('#kazuya-character').removeClass('enemy-characters').addClass('defender-container');
 				$('#defender-container').append(this);
 			}
 		}
@@ -192,11 +186,13 @@ $(document).ready(function() {
 				settingUpDefenders(Characters.Yoshimitsu);
 				defenderSelected= true;
 
-				$('#yoshimitsu-character').removeClass('enemy-characters').addClass('defender-character');
+				$('#yoshimitsu-character').removeClass('enemy-characters').addClass('defender-container');
 				$('#defender-container').append(this);
 			}
 		}
 	});
+
+	//Attack Section=============
 
 	$('#attack-button').on("click", function(){
 		console.log('You selected the attack button.');
@@ -205,7 +201,7 @@ $(document).ready(function() {
 			// if defender are being attacked by character chosen
 
 			defenders.health = defenders.health - character.attack;
-			$($(`#${defenders.name} p.health`)[0]).html(defenders.health);
+			$($(`#${defenders.name} p.health`)[1]).html(defenders.health);
 
 
 			console.log(defenders.health);
@@ -217,7 +213,7 @@ $(document).ready(function() {
 			console.log(character.health);
 
 			character.health = character.health - defenders.attack;
-			$($(`#${character.name} p.health`)[0]).html(character.health);
+			$($(`#${character.name} p.health`)[1]).html(character.health);
 			console.log()
 
 

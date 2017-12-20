@@ -1,10 +1,22 @@
-html {
-    height: 100%;
-}
-
 body {
     /* background-color: lightslategray; */
+    text-align: center;
     background: url("../images/background.jpg") no-repeat center center fixed;
+}
+
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#chosen-characters-container{
+    height: 250px;
+}
+
+img{
+    padding: 10px;
+    background: black;
+    margin: 10px;
 }
 
 header {
@@ -12,15 +24,29 @@ header {
     font-size: 70px;
     background: black;
     color: rgb(211, 35, 35);
-    text-align: center;
+}
+
+.characterzzzz {
+    font-weight: bold;
+}
+
+.character {
+    display: inline-block;
+    align-content: center;
+}
+
+#fight-container {
+    display: inline-block;
+}
+
+#defender-container{
+    height: 250px;
 }
 
 h2 {
     color: red;
 }
 
-img {
-    position: static;
-    background: white;
-    width: 10%;
+h3 {
+    color: yellow;
 }
